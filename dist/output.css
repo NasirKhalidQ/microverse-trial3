@@ -472,18 +472,17 @@ Ensure the default browser behavior of the `hidden` attribute.
   position: static;
 }
 
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
+.flex {
+  display: flex;
 }
 
-.text-6xl {
-  font-size: 3.75rem;
-  line-height: 1;
+.flex-col {
+  flex-direction: column;
 }
 
-.font-bold {
-  font-weight: 700;
+.gap-x-2 {
+  -moz-column-gap: 0.5rem;
+       column-gap: 0.5rem;
 }
 
 .uppercase {
@@ -494,7 +493,23 @@ Ensure the default browser behavior of the `hidden` attribute.
   text-transform: lowercase;
 }
 
-.underline {
-  -webkit-text-decoration-line: underline;
-          text-decoration-line: underline;
+@media only screen and (max-width: 815px) {
+  /* For mobile phones: */
+
+  #navbar ul {
+    border: 1px solid;
+    height: 207px;
+  }
 }
+
+@media only screen and (max-width: 400px) {
+  #main-doc {
+    margin-left: -10px;
+  }
+}
+
+@media (min-width: 640px) {
+  .sm\:flex {
+    display: flex;
+  }
+}  
